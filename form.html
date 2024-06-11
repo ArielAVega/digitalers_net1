@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/form.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="www.gooogle.com.ar" method="post">
+        <label for="txtNombres">Nombres</label>
+        <input id="txtNombres" type="text" placeholder="Ingrese el nombre" required>
+        <br>
+        <label for="txtApellido">Apellido</label>
+        <input id="txtApellido" type="text" placeholder="Ingrese el apellido" required>
+        <br>
+        <label for="txtEmail">E-Mail</label>
+        <input id="txtEmail" type="email" placeholder="info@dominio.com" required>
+        <br>
+        <label for="txtPassword">Password</label>
+        <input id="txtPassword" type="password" placeholder="Ingrese el password" 
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+        <br>
+        <label for="txtEdad">Edad</label>
+        <input id="txtEdad" type="number" placeholder="Ingrese la edad" 
+                min="10" max="20" step="2" required>
+        <br>
+        <label>Estado Civil</label>
+        <label for="rdioEstadoCasado">
+            <input id="rdioEstadoCasado" type="radio" name="estado" value="Casado">
+            Casado
+        </label>
+        <input id="rdioEstadoSoltero" type="radio" name="estado" value="Soltero">
+        <label for="rdioEstadoSoltero">Soltero</label>
+        <br>
+        <label>Intereses</label>
+        <input id="chkLiteratura" type="checkbox" name="intereses" value="Literatura">
+        <label for="chkLiteratura">Literatura</label>
+        <input id="chkDeportes" type="checkbox" name="intereses" value="Deportes">
+        <label for="chkDeportes">Deportes</label>
+        <br>
+        <label for="cmbPaises">País de origen</label>
+        <select id="cmbPaises" name="pais">
+            <option value="" selected>Seleccionar</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Chile">Chile</option>
+        </select>
+        <br>
+        <label for="cmbTecnologias">Tecnologías que conoce</label>
+        <select id="cmbTecnologias" name="tecnologias" multiple>
+            <option value=".NET">.NET</option>
+            <option value="SQL Server">SQL Server</option>
+            <option value="Entity Framework">Entity Framework</option>
+        </select>
+        <br>
+        <label for="addFile">Adjuntar archivo</label>
+        <input id="addFile" type="file" multiple>
+        <br>
+        <label for="txtComentarios">Comentarios</label>
+        <textarea id="txtComentarios" cols="20" rows="5" required></textarea>
+        <br>
+
+        <input type="button" value="Enviar">
+
+    </form>
+</body>
+</html>
