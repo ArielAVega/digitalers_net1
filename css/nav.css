@@ -1,0 +1,121 @@
+:root{
+    --color_navbar:#54748c;
+    --heigth_navbar:80px;
+}
+
+.navbar{
+    background:var(--color_navbar) ;
+    height: var(--heigth_navbar);
+    height: 100%;
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.link_logo{
+    padding: 10px 50px;
+}
+
+.logo{
+    height: 75px;
+}
+
+#checkBar{
+    display: none;
+}
+
+#checkBar:checked ~ .ul_lista{
+    height: calc(100vh-var(var(--heigth_navbar)));
+    overflow: visible;
+}
+
+.checkBarButton{
+    font-size: 35px;
+    color: #b1cbde;
+    float: right;
+    line-height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 40px;
+    cursor: pointer;
+    border-color: #b1cbde;
+    border-radius: .25rem;
+    border: 1px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ul_lista{
+    width: 100%;
+    background:var(--color_navbar);
+    position: absolute;
+    top: var(--heigth_navbar);
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;  
+}
+
+.li_opcion{
+    width: 100%;
+}
+
+.a_opcion{
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 20px 10px;
+    border-bottom: 1px solid #b1cbde;
+}
+
+.a_opcion:hover{
+    background: #445c6c;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+@media(min-width:768px){
+    .checkBarButton{
+        display: none;
+    }
+
+    .ul_lista{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 1rem;
+        margin-right: 20px;
+    }
+
+    .li_opcion{
+        width: 100%;
+        margin-right: 10px;
+    }
+    
+    .a_opcion{
+        font-size: 18px;
+        width: 100%;  
+        padding: 20px 10px;
+        border-bottom: none;
+    }
+
+    .a_opcion:hover{
+        padding: 20px 10px;
+        border-bottom: none;
+    }
+
+
+}
