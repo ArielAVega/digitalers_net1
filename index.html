@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/sectionimages.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <script src="https://kit.fontawesome.com/b33a04ea2c.js" crossorigin="anonymous"></script>
+    
     <title>Inmobiliaria</title>
 </head>
 <body>
     <!--Sección para colocar el navbar-->
-    <nav class="navbar">
+    <nav id="nav_bar" class="navbar">
         <a href="#" class="link_logo">
             <img src="./images/logositio.jpg" alt="Logo empresa" class="logo">
         </a>
@@ -29,7 +29,7 @@
 
     <!--Sección para las opciones de venta y alquileres en formato imagen-->
     
-    <!--<section class="container-fluid">
+    <section id="seccion_images" class="container-fluid">
         <div class="row">   
             <div class="col">
                 <a>Comprar</a>
@@ -40,6 +40,19 @@
                 <img src="./images/home-rent.jpg" alt="imagen alquiler">
             </div>
         </div>     
-    </section>-->
+    </section>
+
+    <script src="https://kit.fontawesome.com/b33a04ea2c.js" crossorigin="anonymous"></script>
+    <script>
+        const checkbox = document.getElementById('checkBar')
+        const section = document.getElementById('seccion_images')
+        checkbox.onchange = function(){
+            if(checkbox.checked){
+                section.style.marginTop = '288px';       
+            }else{
+                section.style.marginTop = '0px';
+            }
+        }    
+    </script>
 </body>
 </html>
